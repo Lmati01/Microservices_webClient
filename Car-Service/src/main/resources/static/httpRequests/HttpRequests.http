@@ -1,0 +1,46 @@
+###
+POST http://localhost:8888/api/car
+Content-Type: application/json
+
+{
+  "brand" : "dadaad",
+  "model": "ddddd",
+  "matricule": "dddddd",
+  "clientId": 14
+}
+###
+GET http://localhost:8888/api/car
+###
+GET http://localhost:8888/api/car/1
+###
+POST http://localhost:8888/api/car/1
+
+{
+    "brand": "Toyota",
+    "model": "Corolla",
+    "matricule": "123ABC",
+    "clientId": 1
+}
+###
+DELETE http://localhost:8888/api/car/1
+
+#RestTemplate
+###
+GET http://localhost:8888/api/car/rest-template/all
+
+#WebClient
+###
+GET http://localhost:8888/api/car/web-client/all
+
+# FeignClient
+###
+GET http://localhost:8888/api/car/feign-client/all
+
+
+# Client Endpoint
+###
+GET http://localhost:8080/api/car/client/rest-template/1
+###
+GET http://localhost:8080/api/car/client/web-client/1
+###
+GET http://localhost:8080/api/car/client/feign-client/1
